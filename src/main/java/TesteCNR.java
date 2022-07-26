@@ -16,26 +16,26 @@ public class TesteCNR {
 		driver.manage().window().setSize(new Dimension(1200, 765));
 		//driver.manage().window().maximize(); //maximizado
 		driver.get("https://hml-cef.cartorionet.com/cartorionet/app/cricorp/authorized/authenticationController/showAuthenticationView?isOnlineRegistrationEnabled=true&isEstateManagementEnabled=false&isCreditorEnabled=true&operationNumberCaption=N%C2%BA+Opera%C3%A7%C3%A3o&speCaption=SPE&isUseEmolumentsRefundProcess=false&isMaster=false");
-		driver.findElement(By.id("username")).sendKeys("pwilmer@catitech.com.br");
-		driver.findElement(By.id("password")).sendKeys("b@cK0fF1c3");
+		driver.findElement(By.id("username")).sendKeys("");
+		driver.findElement(By.id("password")).sendKeys("");
 		driver.findElement(By.id("login")).click();
 		
 		WebElement elements = driver.findElement(By.id("select-profile"));
 		Select combos = new Select(elements);
-		combos.selectByVisibleText("AdministraÁ„o Cati");
+		combos.selectByVisibleText("Administra√ß√£o Cati");
 		
 		
 		WebElement element = driver.findElement(By.id("spe-select"));
 		Select combo = new Select(element);
 		combo.selectByVisibleText("Entrar sem SPE / Centro de custo");
-		combo.selectByVisibleText("(Cati) Regi„o Sul");
-		combo.selectByVisibleText("(Cati) Regi„o Sudeste");
-		combo.selectByVisibleText("(Cati) Regi„o Centro Oeste");
-		combo.selectByVisibleText("(Cati) Regi„o Norte");
+		combo.selectByVisibleText("(Cati) Regi√£o Sul");
+		combo.selectByVisibleText("(Cati) Regi√£o Sudeste");
+		combo.selectByVisibleText("(Cati) Regi√£o Centro Oeste");
+		combo.selectByVisibleText("(Cati) Regi√£o Norte");
 		driver.findElement(By.id("select-profile"));
 		driver.findElement(By.id("choose-profile-btn")).click();
 		driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
-		Assert.assertEquals("CartÛrionet Registro | Home", driver.getTitle());
+		Assert.assertEquals("Cart√≥rionet Registro | Home", driver.getTitle());
 		//driver.quit();
 		
 	}
